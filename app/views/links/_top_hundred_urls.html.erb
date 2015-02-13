@@ -1,0 +1,10 @@
+<% top_urls.each do |link| %>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 link">
+      <p class="title"><%= link_to truncate(link.title, length: 60), link_path(link) %></p>
+      <p class="short_url"><%= link_to link.display_short_url, link.slug, target: '_blank' %></p>
+      <ul class="click_time">
+        <li><span class="badge"><span class="clicks"><%= link.clicks %></span></span> clicks</li>
+      </ul>
+      <p class="long_url"><%= link_to truncate(link.given_url, length: 60), link.given_url %></p>
+    </div>
+<% end %>

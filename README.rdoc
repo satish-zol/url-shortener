@@ -1,0 +1,34 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+Before getting started on Server, run the script server_setup.sh
+This script will install the necessary packages, creates a deploy user who manages our Rails application,
+downloads and installs RVM and Ruby, and add your ssh public key to the instance’s authorized keys.
+
+Things you may want to cover:
+
+* Ruby version ~> 1.9.2
+* Rails version ~> 4.0.0
+
+
+* Database creation
+  setup the postgresql database on server
+
+* Database initialization--
+  rake db:create
+  rake db:migrate
+
+
+* Services (job queues, cache servers, search engines, etc.)
+In this application we are using sidekiq for background stuff such as fetching page title from given url
+once application is setup then you can start the sidekiq process by running command in terminal 'sidekiq'
+
+* Deployment instructions
+run in terminal
+bundle exec cap production deploy
+
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
